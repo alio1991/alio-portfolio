@@ -1,0 +1,62 @@
+.landing-view{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    background-image: url(../../assets/images/Alio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+.name{
+    font-size: 70px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.role{
+    font-size: 30px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.personal-info{
+    padding-left: 10px;;
+    background-color: yellow;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    animation-name: landing-info-animation;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.alio-background{
+    background-color: white;
+    height: 100vh;
+    width: 50%;
+    animation-name: landing-photo-animation;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes landing-photo-animation {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes landing-info-animation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
