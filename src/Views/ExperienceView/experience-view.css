@@ -1,6 +1,16 @@
 .experience-view{
+    /* position: relative; */
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    background-color: green
+    background-color: var(--light-blue)
+}
+
+.technologies{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    width: 100vw;
+    background-color: var(--light-color);
 }
