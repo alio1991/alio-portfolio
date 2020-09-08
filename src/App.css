@@ -53,60 +53,55 @@ button{
   overflow: hidden;
 }
 
-.izda-btn{
+.btn{
   position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  cursor: pointer;
+  color: var(--dark-color);
+  opacity: 0.7;
+}
+
+.izda-btn{
   left: 0;
   top: 50vh;
   margin: 5px;
 }
 
 .abajo-btn{
-  position: absolute;
   left: 50vw;
   bottom: 0;
   margin: 5px;
 }
 
 .dcha-btn{
-  position: absolute;
   right: 0;
   top: 50vh;
   margin: 5px;
 }
 
 .arriba-btn{
-  position: absolute;
   left: 50vw;
   top: 0;
   margin: 5px;
 }
 
+.btn:hover{
+  transition: 2s;
+  width: 100px;
+  height: 100px;
+}
+
 .hide{
-  /* display: none; */
   transition: 3s;
   width: 0;
-
-  /* animation: disappear-view;
-  animation-fill-mode: forwards;
-  animation-duration: 3s; */
 }
 
 .show{
   transition: 3s;
   width: 100vw;
 }
-
-/* @keyframes disappear-view {
-  0% {
-    width: 100vh;
-  }
-  95%{
-    width: 0;
-  }
-  100% {
-    width: 0;
-  }
-} */
 
 
 @keyframes App-logo-spin {

@@ -4,6 +4,11 @@ import StudiesView from './Views/StudiesView/studies-view.jsx';
 import ExperienceView from './Views/ExperienceView/experience-view.jsx';
 import ProjectsView from './Views/ProjectsView/projects-view.jsx';
 
+import { ImBooks } from 'react-icons/im';
+import { MdWork } from 'react-icons/md';
+import { BsHouseFill } from 'react-icons/bs';
+
+
 import './App.css';
 
 function App() {
@@ -17,12 +22,14 @@ function App() {
 
   const changeView = (viewSelected)=> {
     const buttonType = {
-      'setLanding': <div><button type="button" className="izda-btn" onClick={ () => changeView('setStudies')}>Estudios</button>
+      'setLanding': <div>
+                    <ImBooks className="izda-btn btn" onClick={ () => changeView('setStudies')} alt="Formación"/>
                     {/* <button type="button" className="abajo-btn" onClick={ () => changeView('setProjects')}>Proyectos Personales</button> */}
-                    <button type="button" className="dcha-btn" onClick={ () => changeView('setExperience')}>Experiencia Laboral</button></div>,
-      'setStudies': <button type="button" className="dcha-btn" onClick={ () => changeView('setLanding')}>Página Principal</button>,
-      'setExperience': <button type="button" className="izda-btn" onClick={ () => changeView('setLanding')}>Página Principal</button>,
-      'setProjects': <button type="button" className="arriba-btn" onClick={ () => changeView('setLanding')}>Página Principal</button>
+                    <MdWork className="dcha-btn btn" onClick={ () => changeView('setExperience')}/>
+                    </div>,
+      'setStudies': <BsHouseFill className="dcha-btn btn" onClick={ () => changeView('setLanding')}/>,
+      'setExperience': <BsHouseFill className="izda-btn btn" onClick={ () => changeView('setLanding')}/>,
+      'setProjects': <BsHouseFill className="arriba-btn btn" onClick={ () => changeView('setLanding')}/>
     };
     const views = {'setStudies':setStudies, 'setLanding':setLanding,'setExperience':setExperience,'setProjects':setProjects};
     Object.values(views).map(view => view('hide'));
@@ -46,7 +53,7 @@ function App() {
         <LandingView changeView={changeView} visibility={landing}></LandingView>
         <ExperienceView changeView={changeView} visibility={experience}></ExperienceView>
       </div>
-      {/* <ProjectsView changeView={changeView} visibility={projects}></ProjectsView> */}
+      <ProjectsView changeView={changeView} visibility={projects}></ProjectsView>
     </div>
   );
 
