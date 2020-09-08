@@ -54,7 +54,10 @@
     animation-name: landing-photo-animation;
     animation-duration: 5s;
     animation-fill-mode: forwards;
-    /* filter: grayscale(100%); */
+}
+
+.text-info{
+  width: 35vw;
 }
 
 @keyframes landing-photo-animation {
