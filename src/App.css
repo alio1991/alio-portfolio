@@ -10,15 +10,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --dark-color: #006A71;
+  --light-color: #FFFFDD;
+  --light-blue: #CBEAED;
+  --light-green: #D3DE32;
 }
 
 button{
   z-index: 3;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
