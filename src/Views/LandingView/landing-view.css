@@ -22,20 +22,29 @@
     font-family: 'Shadows Into Light', cursive;
 }
 
+.labaru{
+  --labaru-size: 300px;
+  width: var(--labaru-size);
+  height: calc(var(--labaru-size) * 0.8);
+  align-self: flex-end;
+}
+
 .personal-info{
-    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    text-align: justify;
+
+    padding: 0 4rem 0 10px;
     background-color: var(--light-blue);
     height: 100vh;
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: justify;
     animation-name: landing-info-animation;
     animation-duration: 5s;
     animation-fill-mode: forwards;
-    padding-right: 4rem;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .alio-background{
