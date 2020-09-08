@@ -3,7 +3,6 @@ import './landing-view.css';
 
 function LandingView(props) {
   const { visibility } = props;
-  const { changeView } = props;
 
   return (
     <div className={visibility+" landing-view view"}>

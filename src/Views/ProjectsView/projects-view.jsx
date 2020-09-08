@@ -3,7 +3,6 @@ import './projects-view.css';
 
 function ProjectsView(props) {
   const { visibility } = props;
-  const { changeView } = props;
 
   return (
     <div className={visibility+" projects-view view"}>
