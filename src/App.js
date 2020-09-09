@@ -53,7 +53,7 @@ function App() {
         <LandingView changeView={changeView} visibility={landing}></LandingView>
         <ExperienceView changeView={changeView} visibility={experience}></ExperienceView>
       </div>
-      <ProjectsView changeView={changeView} visibility={projects}></ProjectsView>
+      {/* <ProjectsView changeView={changeView} visibility={projects}></ProjectsView> */}
     </div>
   );
 
