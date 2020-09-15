@@ -14,7 +14,13 @@ const ExperienceView = (props)=> {
       rol: 'Fronend Developer',
       duration: 1,
       technologies: [ 
-        'git'
+        'git',
+        'react',
+        'vue',
+        'teams',
+        'vsc',
+        'css3',
+        'js'
       ]
     },
     {
@@ -25,21 +31,39 @@ const ExperienceView = (props)=> {
       duration: 17,
       technologies: [
         'angular',
-        'react',
-        'lit'
+        'lit',
+        'git',
+        'slack',
+        'teams',
+        'css3',
+        'html5',
+        'mocha',
+        'jasmine',
+        'vsc',
+        'jira',
+        'gitLab',
+        'es6',
+        'trello',
+        'bitBucket'
       ]
     }
   ];
-
-  const active = experience.reduce((pre,next) => {
+  
+  const initialActive = experience.reduce((pre,next) => {
     return {'technologies':[...pre.technologies, ...next.technologies]}
   })['technologies'];
-  
+
+  const [active, setActive] = React.useState(initialActive);
+
+  const activateIcons = (list) => {
+   setActive( list ? list : initialActive);
+  }
+
   return (
     <div className={visibility+" experience-view view"}>
         <TechnoBar active={active}/>
         <div className="time-line-relative">
-          <TimeLine firstDate="2018" lastDate={new Date().getFullYear()+1} trail={experience}/>
+          <TimeLine firstDate="2018" lastDate={new Date().getFullYear()+1} trail={experience} enter={(list)=> activateIcons(list)} leave={(list)=> activateIcons(list)}/>
         </div>
     </div>
   );

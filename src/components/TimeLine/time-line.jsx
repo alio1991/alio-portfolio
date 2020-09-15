@@ -10,7 +10,7 @@ const TimeLine = (props)=> {
         <div className="events">
         <div className="date-event event">{props.lastDate}</div>
         {props.trail.map((elem,i)=> 
-        <div className='event' key={i}>
+        <div className='event' key={i} onMouseEnter={()=>props.enter(elem.technologies)} onMouseLeave={()=>props.leave()}>
           <div className="name">{elem.enterprise}</div>
           <div className="stage">({elem.start}-{elem.end || 'Actualmente'})</div>
         </div>
