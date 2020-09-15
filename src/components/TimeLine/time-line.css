@@ -8,7 +8,7 @@
 
 .time-line-relative{
     position: relative;
-    height: calc(100% - 5px);
+    height: calc(90%);
     width: 100%;
 }
 
@@ -65,4 +65,23 @@
     cursor: unset;
     width: 3rem;
     height: 1.6rem;
+}
+
+
+@media (max-width: 950px) {
+    .time-line-relative{
+        height: 80%;
+    }
+}
+
+@media (max-width: 700px) {
+    .time-line-relative{
+        height: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    .time-line-relative{
+        height: 82%;
+    }
 }
