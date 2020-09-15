@@ -1,6 +1,7 @@
 import React from 'react';
 import './experience-view.css';
 import TimeLine from '../../components/TimeLine/time-line.jsx';
+import TechnoBar from '../../components/TechnoBar/techno-bar.jsx';
 
 const ExperienceView = (props)=> {
   const { visibility } = props;
@@ -13,14 +14,6 @@ const ExperienceView = (props)=> {
       rol: 'Fronend Developer',
       duration: 1,
       technologies: [
-        {
-          name: 'React js',
-          experience: 1
-        },
-        {
-          name: 'Vue',
-          experience: 1
-        }
       ]
     },
     {
@@ -30,28 +23,18 @@ const ExperienceView = (props)=> {
       rol: 'Fronend Developer',
       duration: 17,
       technologies: [
-        {
-          name: 'Angular 8',
-          experience: 9
-        },
-        {
-          name: 'React js',
-          experience: 3
-        },
-        {
-          name: 'LitElement',
-          experience: 9
-        }
+        'angular',
+        'react',
+        'lit'
       ]
     }
   ];
 
+  const active = experience.reduce((pre,next) => pre.technologies+next.technologies);
+
   return (
     <div className={visibility+" experience-view view"}>
-        <div className="technologies">
-          <p>lala</p>
-          <p>lolo</p>
-        </div>
+        <TechnoBar active={active}/>
         <div className="time-line-relative">
           <TimeLine firstDate="2018" lastDate={new Date().getFullYear()+1} trail={experience}/>
         </div>

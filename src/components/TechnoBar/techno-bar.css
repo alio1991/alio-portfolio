@@ -1,0 +1,22 @@
+.techno-bar-component{
+    width: 100%;
+    min-height: 100px;
+    height: fit-content;
+    box-sizing: border-box;
+    background-color: var(yellow);
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.techno-icon{
+    height: 50px;
+    width: 50px;
+}
+
+.icon-disabled{
+    filter: grayscale(100%);
+    opacity: 30%;
+}

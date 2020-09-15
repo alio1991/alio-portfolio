@@ -1,6 +1,7 @@
 import React from 'react';
 import './studies-view.css';
 import TimeLine from '../../components/TimeLine/time-line.jsx';
+import TechnoBar from '../../components/TechnoBar/techno-bar.jsx';
 
 function StudiesView(props) {
   const { visibility } = props;
@@ -55,16 +56,16 @@ function StudiesView(props) {
       rol: 'Sistemas micro-informáticos y redes',
       duration: 24,
       technologies: [
+        'angular'
       ]
     }
   ];
 
+  const active = studies.reduce((pre,next) => pre.technologies+next.technologies);
+
   return (
     <div className={visibility+" studies-view view"}>
-      <div className="technologies">
-          <p>lala</p>
-          <p>lolo</p>
-      </div>
+      <TechnoBar active={active}/>
       <div className="time-line-relative">
           <TimeLine firstDate="2009" lastDate="2019"  trail={studies}/>
       </div>
