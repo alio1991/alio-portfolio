@@ -42,11 +42,11 @@ const TechnoBar = (props)=> {
 
   return (
     <div className="techno-bar-component">
-
         {technologies.map((elem,i)=> {
           for(const key in elem){
           return <div className='technology' key={key}>
                   <img className={props.active.includes(key) ? 'techno-icon' : 'techno-icon icon-disabled'} src={elem[key]} alt={key}/>
+          <p className="icon-text">{key}</p>
                 </div>
           }
         })}

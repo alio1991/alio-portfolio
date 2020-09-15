@@ -12,11 +12,29 @@
 
 
 .techno-icon{
+    transition: 2s;
     height: 50px;
     width: 50px;
+}
+
+.techno-icon:not(.icon-disabled){
+    transition: 2s;
+    height: 70px;
+    width: 70px;
+}
+
+.techno-icon:hover:not(.icon-disabled) ~ .icon-text{
+    transition: 1s;
+    transform: rotateY(0deg);
+    color: red;
 }
 
 .icon-disabled{
     filter: grayscale(100%);
     opacity: 30%;
+}
+
+
+.icon-text{
+    transform: rotateY(90deg);
 }

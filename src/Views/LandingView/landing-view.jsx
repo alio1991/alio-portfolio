@@ -1,6 +1,7 @@
 import React from 'react';
 import './landing-view.css';
 import * as labaru from '../../assets/images/labaru.png'
+
 function LandingView(props) {
   const { visibility } = props;
 

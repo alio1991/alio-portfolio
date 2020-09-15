@@ -13,7 +13,8 @@ const ExperienceView = (props)=> {
       end: null,
       rol: 'Fronend Developer',
       duration: 1,
-      technologies: [
+      technologies: [ 
+        'git'
       ]
     },
     {
@@ -30,8 +31,10 @@ const ExperienceView = (props)=> {
     }
   ];
 
-  const active = experience.reduce((pre,next) => pre.technologies+next.technologies);
-
+  const active = experience.reduce((pre,next) => {
+    return {'technologies':[...pre.technologies, ...next.technologies]}
+  })['technologies'];
+  
   return (
     <div className={visibility+" experience-view view"}>
         <TechnoBar active={active}/>

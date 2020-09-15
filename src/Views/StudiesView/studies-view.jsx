@@ -14,18 +14,9 @@ function StudiesView(props) {
       rol: 'Ingeniería Informática',
       duration: 48,
       technologies: [
-        {
-          name: 'Java',
-          experience: 2
-        },
-        {
-          name: 'Python',
-          experience: 1
-        },
-        {
-          name: 'Git',
-          experience: 1
-        }
+        'java',
+        'git',
+        'python'
       ]
     },
     {
@@ -35,18 +26,9 @@ function StudiesView(props) {
       rol: 'Administración de sistemas Informáticos en Red',
       duration: 24,
       technologies: [
-        {
-          name: 'PHP',
-          experience: 1
-        },
-        {
-          name: 'HTML',
-          experience: 2
-        },
-        {
-          name: 'CSS',
-          experience: 2
-        }
+        'html',
+        'css',
+        'php'
       ]
     },
     {
@@ -56,12 +38,14 @@ function StudiesView(props) {
       rol: 'Sistemas micro-informáticos y redes',
       duration: 24,
       technologies: [
-        'angular'
+        'vue'
       ]
     }
   ];
 
-  const active = studies.reduce((pre,next) => pre.technologies+next.technologies);
+  const active = studies.reduce((pre,next) => {
+    return {'technologies':[...pre.technologies, ...next.technologies]}
+  })['technologies'];
 
   return (
     <div className={visibility+" studies-view view"}>
