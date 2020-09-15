@@ -11,7 +11,7 @@ function LandingView(props) {
 
         </div>
         <div className="personal-info">
-          <img className="labaru" src={labaru}/>
+          <img className="labaru" alt="labaru" src={labaru}/>
           <div className="text-info">
             <h1 className="name">Alio Agudo Alonso</h1>
             <h2 className="role">Frontend Developer</h2>

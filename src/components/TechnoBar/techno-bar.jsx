@@ -64,6 +64,7 @@ const TechnoBar = (props)=> {
                   <p className="icon-text">{key}</p>
                 </div>
           }
+          return true;
         })}
     </div>
   );
