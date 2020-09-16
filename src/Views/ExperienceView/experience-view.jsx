@@ -20,7 +20,8 @@ const ExperienceView = (props)=> {
         'teams',
         'vsc',
         'css3',
-        'js'
+        'js',
+        'gitLab'
       ]
     },
     {
